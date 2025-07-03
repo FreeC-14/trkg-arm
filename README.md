@@ -63,7 +63,7 @@ sudo apt update && sudo apt install -y \
 
 ```text
 TRKG - Hafif ARM Paket Yöneticisi
-Copyright (C) 2023 dreamtech.dev & FreeC-14
+Copyright (C) 2025 dreamtech.dev & FreeC-14
 
 Bu program özgür yazılımdır: GNU GPL v3 lisansı ile dağıtılmaktadır.
 Bu programın yararlı olacağı umulur ancak HİÇBİR GARANTİ VERMEZ.
