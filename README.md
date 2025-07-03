@@ -136,4 +136,3 @@ sudo chmod +x /usr/local/bin/trkg
 
 > **dreamtech.dev** & **FreeC-14** ekibi tarafından geliştirilmiştir  
 > Son güncelleme: ![](https://img.shields.io/github/last-commit/dreamtech-dev/trkg-arm?color=blue&label=Güncelleme&style=flat-square)
-```
