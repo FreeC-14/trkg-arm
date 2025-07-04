@@ -17,30 +17,32 @@
 </pre>
 </p>
 
-## TRKG Özellikleri
+## TRKG Features
 
 ```bash
-# Temel Kullanım
-trkg [komut] [seçenekler] [argümanlar]
+# Basic usage
+trkg [command] [options] [arguments]
 ```
 
-### Komut Referansı
-| Komut       | Kullanım                      | Açıklama                     |
-|-------------|-------------------------------|------------------------------|
-| `init`      | `trkg init <paket-adı>`       | Yeni paket şablonu oluşturur |
-| `build`     | `trkg build <yol>`            | Paket derleme                |
-| `install`   | `trkg install <paket.deb>`    | Paket kurulumu               |
-| `remove`    | `trkg remove <paket-adı>`     | Paket kaldırma               |
-| `search`    | `trkg search <anahtar-kelime>`| Paket arama                  |
-| `upgrade`   | `trkg upgrade`                | Tüm paketleri güncelle       |
-| `list`      | `trkg list [--installed]`     | Paket listeleme              |
-| `info`      | `trkg info <paket-adı>`       | Paket detayları              |
+### Command Reference
+
+| Command  | Usage                          | Description                          |
+|----------|--------------------------------|--------------------------------------|
+| init     | `trkg init <package-name>`     | Create new package template          |
+| build    | `trkg build <path>`            | Build package                        |
+| install  | `trkg install <package.trkg>`  | Install package                      |
+| remove   | `trkg remove <package-name>`   | Remove package                       |
+| search   | `trkg search <keyword>`        | Search packages                      |
+| upgrade  | `trkg upgrade`                 | Upgrade all installed packages       |
+| list     | `trkg list [--installed]`      | List packages                        |
+| info     | `trkg info <package-name>`     | Show package details                 |
 
 ---
 
-##  Sistem Gereksinimleri
+## System Requirements
 
-### Zorunlu Bağımlılıklar
+### Required Dependencies
+
 ```bash
 # Debian/Ubuntu
 sudo apt update && sudo apt install -y \
@@ -50,89 +52,87 @@ sudo apt update && sudo apt install -y \
     openssl
 ```
 
-### Minimum Versiyonlar
-| Paket       | Versiyon  | Kontrol Komutu               |
-|-------------|-----------|------------------------------|
-| OpenSSL     | ≥ 1.1.x   | `openssl version`            |
-| libcurl     | ≥ 7.64.0  | `curl --version`             |
-| libcjson    | ≥ 1.7.14  | `dpkg -l libcjson-dev`       |
+### Minimum Versions
+
+| Package   | Version     | Check Command          |
+|-----------|-------------|------------------------|
+| OpenSSL   | ≥ 1.1.x     | `openssl version`      |
+| libcurl   | ≥ 7.64.0    | `curl --version`       |
+| libcjson  | ≥ 1.7.14    | `dpkg -l libcjson-dev` |
 
 ---
 
-##  Lisans Bilgisi
+## License Information
 
-```text
-TRKG - Hafif ARM Paket Yöneticisi
+**TRKG - Lightweight ARM Package Manager**  
 Copyright (C) 2025 dreamtech.dev & FreeC-14
 
-Bu program özgür yazılımdır: GNU GPL v3 lisansı ile dağıtılmaktadır.
-Bu programın yararlı olacağı umulur ancak HİÇBİR GARANTİ VERMEZ.
-```
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License v3.0.  
+This program comes WITHOUT ANY WARRANTY.
 
-**Tam lisans metni:** [LICENSE dosyasını inceleyin](LICENSE)
+*Full license text: See the LICENSE file*
 
 ---
 
-##  Katkı Süreci
+## Contribution Process
 
-1. **Depoyu Forklayın**  
-   [GitHub Fork butonuna tıklayarak](https://github.com/dreamtech-dev/trkg-arm/fork)
+1. **Fork the repository**  
+   Click Fork on GitHub
 
-2. **Geliştirme Yapın**  
+2. **Develop**
    ```bash
-   git clone https://github.com/sizin-kullanici-adi/trkg-arm.git
+   git clone https://github.com/your-username/trkg-arm.git
    cd trkg-arm
-   git checkout -b yeni-ozellik
+   git checkout -b feature-branch
    ```
 
-3. **Değişiklikleri Gönderin**  
+3. **Commit and push changes**
    ```bash
    git add .
-   git commit -m "Yeni özellik: xyz eklendi"
-   git push origin yeni-ozellik
+   git commit -m "Add new feature xyz"
+   git push origin feature-branch
    ```
 
-4. **Pull Request Açın**  
-   GitHub üzerinden ana depoya PR gönderin
+4. **Create a Pull Request**  
+   Open a PR from your feature branch to the main repo
 
 ---
 
-##  Sorun Giderme
+## Troubleshooting
 
-### Sık Karşılaşılan Sorunlar
+### Common Issues
 
-**Hata:** `Bağımlılıklar karşılanamadı`
+**Error: Missing dependencies**
 ```bash
-# Çözüm:
+# Solution:
 sudo apt --fix-broken install
 ```
 
-**Hata:** `ARM mimari uyumsuzluğu`
+**Error: ARM architecture mismatch**
 ```bash
-# Kontrol edin:
+# Check architecture:
 dpkg --print-architecture
 uname -m
 ```
 
-**Hata:** `İzin reddedildi`
+**Error: Permission denied**
 ```bash
-# Çözüm:
+# Solution:
 sudo chmod +x /usr/local/bin/trkg
 ```
 
 ---
 
-##  İletişim & Destek
+## Contact & Support
 
-| Platform       | Bağlantı                              |
-|----------------|---------------------------------------|
-| GitHub Issues  | [Yeni Issue Aç](https://github.com/freec-14/trkg-arm/issues) |
-| E-posta        | sussyarch@proton.me               |
-| Discord        | [Sunucuya Katıl](https://discord.gg/mEYASMKRkn) |
-
-[![TRKG Build Status](https://img.shields.io/github/actions/workflow/status/dreamtech-dev/trkg-arm/build.yml?label=Build&style=for-the-badge)](https://github.com/dreamtech-dev/trkg-arm/actions)
+| Platform        | Link                  |
+|-----------------|-----------------------|
+| GitHub Issues   | [Open Issue]          |
+| Email           | sussyarch@proton.me   |
+| Discord         | [Join Server]         |
 
 ---
 
-> **dreamtech.dev** & **FreeC-14** ekibi tarafından geliştirilmiştir  
-> Son güncelleme: ![](https://img.shields.io/github/last-commit/dreamtech-dev/trkg-arm?color=blue&label=Güncelleme&style=flat-square)
+> Developed by dreamtech.dev & FreeC-14  
+Last update: 2025
+```
